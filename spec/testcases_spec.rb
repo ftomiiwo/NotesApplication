@@ -18,12 +18,10 @@ RSpec.describe "NotesApplication" do
       expect {NotesApplication.new}.to raise_error ArgumentError
     end
     it "should not pass due to more than 1 input" do
-      expect {NotesApplication.new "author_one","auth/
-        or_two"}.to raise_error ArgumentError
+      expect {NotesApplication.new "author_one","author_two"}.to raise_error ArgumentError
     end
     it "should not pass due to more than 1 input" do
-      expect {NotesApplication.new "author_o/
-        ne","author_two","author_three"}.to raise_error ArgumentError
+      expect {NotesApplication.new "author_one","author_two","author_three"}.to raise_error ArgumentError
     end
   end
   context "when running #create method" do
@@ -35,17 +33,13 @@ RSpec.describe "NotesApplication" do
       expect {tomiiwo.create }.to raise_error ArgumentError
     end
     it "should run" do
-      expect {tomiiwo.create "This is an in /
-        test"}.not_to raise_error ArgumentError
+      expect {tomiiwo.create "This is an in test"}.not_to raise_error ArgumentError
     end
     it "should not run" do
-      expect {tomiiwo.create "This is a test/
-        ", "this is another test"}.to raise_error ArgumentError
+      expect {tomiiwo.create "This is a test", "this is another test"}.to raise_error ArgumentError
     end
     it "should not run" do
-      expect {tomiiwo.create "This is a test", "this is /
-        another test", "This is yet another test/
-        "}.to raise_error ArgumentError
+      expect {tomiiwo.create "This is a test", "this is another test", "This is yet another test"}.to raise_error ArgumentError
     end
   end
   context "when running #get method" do
@@ -78,12 +72,10 @@ RSpec.describe "NotesApplication" do
       expect {tomiiwo.search }.to raise_error ArgumentError
     end
     it "should not run" do
-      expect {tomiiwo.search "i am looking for A", "I am /
-        looking for B"}.to raise_error ArgumentError
+      expect {tomiiwo.search "i am looking for A", "I am looking for B"}.to raise_error ArgumentError
     end
     it "should not run" do
-      expect {tomiiwo.search "i am looking for A", "I am /
-        looking for B","I am looking for C"}.to raise_error ArgumentError
+      expect {tomiiwo.search "i am looking for A", "I am looking for B","I am looking for C"}.to raise_error ArgumentError
     end
   end
   context "When running the #delete method" do
