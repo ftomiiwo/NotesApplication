@@ -2,15 +2,15 @@ require "./lib/NotesApplication"
 include Tomiiwo
 RSpec.describe "NotesApplication" do
   context "When several instances are created" do
-    it 'should pass' do
+    it "should pass" do
       ade = NotesApplication.new("Ade")
       expect(ade.author).to eq "Ade"
     end
-    it 'should pass' do
+    it "should pass" do
       ade = NotesApplication.new("Ola")
       expect(ade.author).to eq "Ola"
     end
-    it 'should pass' do
+    it "should pass" do
       new_author = NotesApplication.new("New Author") 
       expect(new_author.author).to eq "New Author"
     end
@@ -18,8 +18,8 @@ RSpec.describe "NotesApplication" do
       expect {NotesApplication.new}.to raise_error ArgumentError
     end
     it "should not pass due to more than 1 input" do
-      expect {NotesApplication.new 'author_one','auth/
-        or_two'}.to raise_error ArgumentError
+      expect {NotesApplication.new "author_one","auth/
+        or_two"}.to raise_error ArgumentError
     end
     it "should not pass due to more than 1 input" do
       expect {NotesApplication.new "author_o/
