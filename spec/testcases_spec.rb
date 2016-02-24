@@ -1,8 +1,6 @@
 require './lib/NotesApplication'
 include Tomiiwo
-
 RSpec.describe "NotesApplication" do
-
   context 'When several instances are created' do
     it 'should pass' do
       ade = NotesApplication.new("Ade")
@@ -28,7 +26,6 @@ RSpec.describe "NotesApplication" do
         ne','author_two','author_three'}.to raise_error ArgumentError
     end
   end
-
   context 'when running #create method' do
     tomiiwo = NotesApplication.new 'Tomiiwo'
     tomiiwo.create "This is a test message"
@@ -73,7 +70,6 @@ RSpec.describe "NotesApplication" do
       expect(tomiiwo.get (-1)) == 'This is the third test message'
     end
   end
-
   context 'When running #search method' do
     tomiiwo = NotesApplication.new 'Tomiiwo'
     tomiiwo.create "This is a test message"
@@ -102,5 +98,4 @@ RSpec.describe "NotesApplication" do
   it 'should not run' do
     expect {tomiiwo.delete "this is "}.to raise_error NameError
   end
-
 end
