@@ -1,0 +1,4 @@
+language: ruby
+branches: 
+  ch_ci_integration:
+  ch_refactor
