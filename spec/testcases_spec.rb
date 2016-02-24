@@ -1,14 +1,8 @@
 require_relative '../lib/NotesApplication'
 require 'spec_helper'
-
-# notes = NotesApplication.new('Tomiiwo')
-# subject(:notes) {Note::NotesApplication}
-# subject(:note_obj) {notes.new('Tomiiwo') }
-
 RSpec.describe Note::NotesApplication do
   subject(:notes) { Note::NotesApplication }
   subject(:note_obj) {notes.new('Tomiiwo') }
-
    describe '#initialize' do
     it 'returns an Instance of the class NotesApplication' do
       expect(NotesApplication.new('Tomiiwo')).to be_an_instance_of NotesApplication
