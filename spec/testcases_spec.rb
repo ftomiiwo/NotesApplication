@@ -1,5 +1,4 @@
 require './lib/NotesApplication'
-# require_relative 'spec_helper'
 include Tomiiwo
 
 RSpec.describe "NotesApplication" do
@@ -91,9 +90,6 @@ RSpec.describe "NotesApplication" do
       expect {tomiiwo.search 'i am looking for A', 'I am /
         looking for B','I am looking for C'}.to raise_error ArgumentError
     end
-    # it 'should run' do
-    #   expect {tomiiwo.search 'third'}.to eq "Showing results for search '<third>'Note ID: 2,\n\n[This is the third test message]\n\nBy Author [Tomiiwo]"
-    # end
   end
   context 'When running the #delete method' do
     tomiiwo = NotesApplication.new 'Tomiiwo'
@@ -108,55 +104,3 @@ RSpec.describe "NotesApplication" do
   end
 
 end
-# context "Testing if user writes nothing in a new note" do
-#     tomiiwo = NotesApplication.new("Tomiiwo")
-#     tomiiwo.create "This is a test note"
-#     tomiiwo.create "This is another test note"
-#     tomiiwo.create "Stop writing test note"
-
-#     it 'returns array or notes' do
-#       expect {tomiiwo.get(0)}.to eq "This is a test note"
-#     end
-
-    
-
-
-
-#   end
-# notes = NotesApplication.new('Tomiiwo')
-# subject(:notes) {Note::NotesApplication}
-# subject(:note_obj) {notes.new('Tomiiwo') }
-
-# RSpec.describe Note::NotesApplication do
-#   subject(:notes) { Note::NotesApplication }
-#   subject(:note_obj) {notes.new('Tomiiwo') }
-
-#    describe '#initialize' do
-#     it 'returns an Instance of the class NotesApplication' do
-#       expect(NotesApplication.new('Tomiiwo')).to be_an_instance_of NotesApplication
-#     end
-#     it 'accepts only one argument' do
-#       expect {NotesApplication.new}.to raise_error ArgumentError
-#       expect {NotesApplication.new('Tomiiwo','Abosede')}.to raise_error ArgumentError
-#       expect {NotesApplication.new('Tomiiwo')}.not_to raise_error
-#     end
-#   end
-#   describe '#create' do
-#     it 'accepts only one argument' do
-#       expect {NotesApplication.new}.to raise_error ArgumentError
-#       expect {NotesApplication.new('Tomiiwo','Abosede')}.to raise_error ArgumentError
-#       expect {NotesApplication.new('Tomiiwo')}.not_to raise_error
-#     end
-#     it 'adds content of new note to array Notes' do
-#       note_obj.create("This is a test message")
-#       expect(note_obj.instance_variable_get(notes)).to eql ['This is a test message']
-#       expect(note_obj.instance_variable_get(notes)).to eql 1
-#       expect {note_obj.create('This is a test message') }.to output("Note has been created.").to_stdout
-#     end
-#   end
-
-# end
-
-
-
-
