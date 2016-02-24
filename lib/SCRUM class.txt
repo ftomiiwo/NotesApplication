@@ -1,0 +1,55 @@
+
+Agile Methodology
+Agile methodology release a minimum viable product at any point in time
+
+
+The client is part of the agile team
+
+1. Individual Interactions over processes and tools
+2. A working software over comprehensive documentation
+3. Customer collaboration over contract negotiations
+4. Responding to change ove rfollowing a plan
+
+
+Methodologies
+
+SCRUM, Xtreme Programming
+
+SCRUM
+- Standups,
+
+- sprints planning
+
+we break tasks down into stories, assign developers to work on particulars of the story
+
+-Sprint length
+-sprint retrospective
+
+the team consists of a scrum master (like a cheif whip)
+
+research on Agile Methodologies and SCRUM
+
+--------------Tools
+i. Pivotal Tracker
+ice box: where you put the stories, its an idea box ------ any one involved in the project can write here
+
+backlog: things move from the Ice Box to the backlog, it is where we have prioritized stories
+
+current: this is what is being worked on presently
+
+done: things that have been completed
+
+
+
+Project: Create a Board Game
+Requirement: -Objects must be used (Cards, Game Actor, Collectible Items)
+
+Project: Create Children Book
+
+
+
+
+
+
+
+Spring planning is planning the backlog and assignment and assigning people to it
