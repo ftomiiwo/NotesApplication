@@ -48,7 +48,6 @@ RSpec.describe "NotesApplication" do
         '}.to raise_error ArgumentError
     end
   end
-
   context 'when running #get method' do
     tomiiwo = NotesApplication.new 'Tomiiwo'
     tomiiwo.create "This is a test message"
