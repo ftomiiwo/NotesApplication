@@ -3,8 +3,6 @@ require_relative '../lib/NotesApplication'
 
 puts "Welcome to a Ruby based Note Application"
 appOn = true
-# class Program < NotesApplication
-# end
 puts "Enter Author's Name: "
 author1 = gets.chomp
 NA = NotesApplication.new(author1)
@@ -29,13 +27,10 @@ while appOn
     note_content = gets.chomp
     NA.create(note_content)
   when "list"
-    puts "you want list abi"
     puts NA.list
-  #  puts "Author is : #{@@author}"
   when "read"
     puts "what note do you want to read? Enter the id: "
     note_id = gets.chomp
-  #  note_id = note_id.to_i
     if (/\d+/).match(note_id) == nil
         puts "Enter a valid Number... e.g. 1, 3, .. 50!"
     elsif note_id.to_i < 1
@@ -74,10 +69,6 @@ while appOn
   else
     puts "\nThe Operation you want to perform is not available!. Follow the instructions above."
   end
-
-
-
-
   puts "\n\nDo you want to perform another Operation? (Yes(Y)/No(N))"
   operateOn = gets.chomp.downcase
 
