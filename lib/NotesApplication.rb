@@ -1,4 +1,5 @@
 module Tomiiwo
+  
   class NotesApplication
     attr_accessor :author
     attr_accessor :notes
@@ -8,6 +9,7 @@ module Tomiiwo
         puts "Enter a number for note_id"
       end
     end
+    
     def handle_error author
       raise "Do not include symbols or number in /
       author's name" if @author.include? (/[\W\D]/)
@@ -16,6 +18,7 @@ module Tomiiwo
       raise "Author's name must not be /
       empty!" if @author.empty?
     end
+    
     def initialize(author)
       raise "Author's name cannot be empty" if author == ''
       raise "Author's name cannot be a number" if author.is_a? Integer
@@ -35,6 +38,7 @@ module Tomiiwo
       puts "\n"*2
       puts "By Author [#{@author}]"
     end
+    
     def get note_id
       id = note_id.to_i - 1
       raise "Your input is not a number" if !note_id.is_a? Integer
@@ -42,6 +46,7 @@ module Tomiiwo
       raise "Remember to enter a number" if note_id.is_a? String
       puts "#{@notes[id]}"
     end
+    
     def search search_text
       for x in 1..(@notes.size-1)
         if @notes[x].include? search_text
@@ -55,6 +60,7 @@ module Tomiiwo
         end
       end
     end
+    
     def delete note_id
       puts "Note not in the Library, you can create one!" if @notes[id] == nil
       return "Enter a valid argument" if note_id == nil
@@ -65,6 +71,7 @@ module Tomiiwo
       id = note_id.to_i - 1
       @notes.delete_at(id)
     end
+    
     def edit(note_id, new_content)
       checkNoteId note_id
       checkNoteInput new_content
@@ -72,9 +79,6 @@ module Tomiiwo
       @notes[note_id] = new_content
     end
 
-
   end
-
-
 
 end
