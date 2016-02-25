@@ -1,5 +1,4 @@
 module Tomiiwo
-  
   class NotesApplication
     attr_accessor :author
     attr_accessor :notes
@@ -78,7 +77,5 @@ module Tomiiwo
       checkifNoteExists note_id
       @notes[note_id] = new_content
     end
-
   end
-
 end
